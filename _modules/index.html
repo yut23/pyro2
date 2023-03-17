@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview: module code &mdash; pyro 0.0.post1578+g4c90ee6 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pyro
+              <img src="../_static/logo.gif" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction to pyro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Setting up pyro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes on the numerical methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design ideas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../output.html">Working with output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems.html">Adding a problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mesh_basics.html">Mesh overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mesh-examples.html">Mesh examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Solvers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advection_basics.html">Advection solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compressible_basics.html">Compressible hydrodynamics solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compressible_compare.html">Compressible solver comparisons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multigrid_basics.html">Multigrid solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multigrid-examples.html">Multigrid examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../diffusion_basics.html">Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../incompressible_basics.html">Incompressible hydrodynamics solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lowmach_basics.html">Low Mach number hydrodynamics solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../swe_basics.html">Shallow water solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../particles_basics.html">Particles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Utilities</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../analysis.html">Analysis routines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Contributing and getting help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ack.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ack.html#history">History</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyro</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview: module code</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>All modules for which code is available</h1>
+<ul><li><a href="pyro/advection/advective_fluxes.html">pyro.advection.advective_fluxes</a></li>
+<li><a href="pyro/advection/problems/smooth.html">pyro.advection.problems.smooth</a></li>
+<li><a href="pyro/advection/problems/test.html">pyro.advection.problems.test</a></li>
+<li><a href="pyro/advection/problems/tophat.html">pyro.advection.problems.tophat</a></li>
+<li><a href="pyro/advection/simulation.html">pyro.advection.simulation</a></li>
+<li><a href="pyro/advection_fv4/fluxes.html">pyro.advection_fv4.fluxes</a></li>
+<li><a href="pyro/advection_fv4/interface.html">pyro.advection_fv4.interface</a></li>
+<li><a href="pyro/advection_fv4/problems/smooth.html">pyro.advection_fv4.problems.smooth</a></li>
+<li><a href="pyro/advection_fv4/simulation.html">pyro.advection_fv4.simulation</a></li>
+<li><a href="pyro/advection_nonuniform/advective_fluxes.html">pyro.advection_nonuniform.advective_fluxes</a></li>
+<li><a href="pyro/advection_nonuniform/problems/slotted.html">pyro.advection_nonuniform.problems.slotted</a></li>
+<li><a href="pyro/advection_nonuniform/problems/test.html">pyro.advection_nonuniform.problems.test</a></li>
+<li><a href="pyro/advection_nonuniform/simulation.html">pyro.advection_nonuniform.simulation</a></li>
+<li><a href="pyro/advection_rk/fluxes.html">pyro.advection_rk.fluxes</a></li>
+<li><a href="pyro/advection_rk/problems/smooth.html">pyro.advection_rk.problems.smooth</a></li>
+<li><a href="pyro/advection_rk/problems/test.html">pyro.advection_rk.problems.test</a></li>
+<li><a href="pyro/advection_rk/problems/tophat.html">pyro.advection_rk.problems.tophat</a></li>
+<li><a href="pyro/advection_rk/simulation.html">pyro.advection_rk.simulation</a></li>
+<li><a href="pyro/advection_weno/fluxes.html">pyro.advection_weno.fluxes</a></li>
+<li><a href="pyro/advection_weno/problems/smooth.html">pyro.advection_weno.problems.smooth</a></li>
+<li><a href="pyro/advection_weno/problems/test.html">pyro.advection_weno.problems.test</a></li>
+<li><a href="pyro/advection_weno/problems/tophat.html">pyro.advection_weno.problems.tophat</a></li>
+<li><a href="pyro/advection_weno/simulation.html">pyro.advection_weno.simulation</a></li>
+<li><a href="pyro/compressible/BC.html">pyro.compressible.BC</a></li>
+<li><a href="pyro/compressible/derives.html">pyro.compressible.derives</a></li>
+<li><a href="pyro/compressible/eos.html">pyro.compressible.eos</a></li>
+<li><a href="pyro/compressible/interface.html">pyro.compressible.interface</a></li>
+<li><a href="pyro/compressible/problems/acoustic_pulse.html">pyro.compressible.problems.acoustic_pulse</a></li>
+<li><a href="pyro/compressible/problems/advect.html">pyro.compressible.problems.advect</a></li>
+<li><a href="pyro/compressible/problems/bubble.html">pyro.compressible.problems.bubble</a></li>
+<li><a href="pyro/compressible/problems/gresho.html">pyro.compressible.problems.gresho</a></li>
+<li><a href="pyro/compressible/problems/hse.html">pyro.compressible.problems.hse</a></li>
+<li><a href="pyro/compressible/problems/kh.html">pyro.compressible.problems.kh</a></li>
+<li><a href="pyro/compressible/problems/logo.html">pyro.compressible.problems.logo</a></li>
+<li><a href="pyro/compressible/problems/quad.html">pyro.compressible.problems.quad</a></li>
+<li><a href="pyro/compressible/problems/ramp.html">pyro.compressible.problems.ramp</a></li>
+<li><a href="pyro/compressible/problems/rt.html">pyro.compressible.problems.rt</a></li>
+<li><a href="pyro/compressible/problems/rt2.html">pyro.compressible.problems.rt2</a></li>
+<li><a href="pyro/compressible/problems/sedov.html">pyro.compressible.problems.sedov</a></li>
+<li><a href="pyro/compressible/problems/sod.html">pyro.compressible.problems.sod</a></li>
+<li><a href="pyro/compressible/problems/test.html">pyro.compressible.problems.test</a></li>
+<li><a href="pyro/compressible/simulation.html">pyro.compressible.simulation</a></li>
+<li><a href="pyro/compressible/unsplit_fluxes.html">pyro.compressible.unsplit_fluxes</a></li>
+<li><a href="pyro/compressible_fv4/fluxes.html">pyro.compressible_fv4.fluxes</a></li>
+<li><a href="pyro/compressible_fv4/problems/acoustic_pulse.html">pyro.compressible_fv4.problems.acoustic_pulse</a></li>
+<li><a href="pyro/compressible_fv4/problems/advect.html">pyro.compressible_fv4.problems.advect</a></li>
+<li><a href="pyro/compressible_fv4/problems/bubble.html">pyro.compressible_fv4.problems.bubble</a></li>
+<li><a href="pyro/compressible_fv4/problems/gresho.html">pyro.compressible_fv4.problems.gresho</a></li>
+<li><a href="pyro/compressible_fv4/problems/hse.html">pyro.compressible_fv4.problems.hse</a></li>
+<li><a href="pyro/compressible_fv4/problems/kh.html">pyro.compressible_fv4.problems.kh</a></li>
+<li><a href="pyro/compressible_fv4/problems/logo.html">pyro.compressible_fv4.problems.logo</a></li>
+<li><a href="pyro/compressible_fv4/problems/quad.html">pyro.compressible_fv4.problems.quad</a></li>
+<li><a href="pyro/compressible_fv4/problems/ramp.html">pyro.compressible_fv4.problems.ramp</a></li>
+<li><a href="pyro/compressible_fv4/problems/rt.html">pyro.compressible_fv4.problems.rt</a></li>
+<li><a href="pyro/compressible_fv4/problems/rt2.html">pyro.compressible_fv4.problems.rt2</a></li>
+<li><a href="pyro/compressible_fv4/problems/sedov.html">pyro.compressible_fv4.problems.sedov</a></li>
+<li><a href="pyro/compressible_fv4/problems/sod.html">pyro.compressible_fv4.problems.sod</a></li>
+<li><a href="pyro/compressible_fv4/problems/test.html">pyro.compressible_fv4.problems.test</a></li>
+<li><a href="pyro/compressible_fv4/simulation.html">pyro.compressible_fv4.simulation</a></li>
+<li><a href="pyro/compressible_react/problems/flame.html">pyro.compressible_react.problems.flame</a></li>
+<li><a href="pyro/compressible_react/problems/rt.html">pyro.compressible_react.problems.rt</a></li>
+<li><a href="pyro/compressible_react/simulation.html">pyro.compressible_react.simulation</a></li>
+<li><a href="pyro/compressible_rk/fluxes.html">pyro.compressible_rk.fluxes</a></li>
+<li><a href="pyro/compressible_rk/problems/acoustic_pulse.html">pyro.compressible_rk.problems.acoustic_pulse</a></li>
+<li><a href="pyro/compressible_rk/problems/advect.html">pyro.compressible_rk.problems.advect</a></li>
+<li><a href="pyro/compressible_rk/problems/bubble.html">pyro.compressible_rk.problems.bubble</a></li>
+<li><a href="pyro/compressible_rk/problems/gresho.html">pyro.compressible_rk.problems.gresho</a></li>
+<li><a href="pyro/compressible_rk/problems/hse.html">pyro.compressible_rk.problems.hse</a></li>
+<li><a href="pyro/compressible_rk/problems/kh.html">pyro.compressible_rk.problems.kh</a></li>
+<li><a href="pyro/compressible_rk/problems/logo.html">pyro.compressible_rk.problems.logo</a></li>
+<li><a href="pyro/compressible_rk/problems/quad.html">pyro.compressible_rk.problems.quad</a></li>
+<li><a href="pyro/compressible_rk/problems/ramp.html">pyro.compressible_rk.problems.ramp</a></li>
+<li><a href="pyro/compressible_rk/problems/rt.html">pyro.compressible_rk.problems.rt</a></li>
+<li><a href="pyro/compressible_rk/problems/rt2.html">pyro.compressible_rk.problems.rt2</a></li>
+<li><a href="pyro/compressible_rk/problems/sedov.html">pyro.compressible_rk.problems.sedov</a></li>
+<li><a href="pyro/compressible_rk/problems/sod.html">pyro.compressible_rk.problems.sod</a></li>
+<li><a href="pyro/compressible_rk/problems/test.html">pyro.compressible_rk.problems.test</a></li>
+<li><a href="pyro/compressible_rk/simulation.html">pyro.compressible_rk.simulation</a></li>
+<li><a href="pyro/compressible_sdc/problems/acoustic_pulse.html">pyro.compressible_sdc.problems.acoustic_pulse</a></li>
+<li><a href="pyro/compressible_sdc/problems/advect.html">pyro.compressible_sdc.problems.advect</a></li>
+<li><a href="pyro/compressible_sdc/problems/bubble.html">pyro.compressible_sdc.problems.bubble</a></li>
+<li><a href="pyro/compressible_sdc/problems/gresho.html">pyro.compressible_sdc.problems.gresho</a></li>
+<li><a href="pyro/compressible_sdc/problems/hse.html">pyro.compressible_sdc.problems.hse</a></li>
+<li><a href="pyro/compressible_sdc/problems/kh.html">pyro.compressible_sdc.problems.kh</a></li>
+<li><a href="pyro/compressible_sdc/problems/logo.html">pyro.compressible_sdc.problems.logo</a></li>
+<li><a href="pyro/compressible_sdc/problems/quad.html">pyro.compressible_sdc.problems.quad</a></li>
+<li><a href="pyro/compressible_sdc/problems/ramp.html">pyro.compressible_sdc.problems.ramp</a></li>
+<li><a href="pyro/compressible_sdc/problems/rt.html">pyro.compressible_sdc.problems.rt</a></li>
+<li><a href="pyro/compressible_sdc/problems/rt2.html">pyro.compressible_sdc.problems.rt2</a></li>
+<li><a href="pyro/compressible_sdc/problems/sedov.html">pyro.compressible_sdc.problems.sedov</a></li>
+<li><a href="pyro/compressible_sdc/problems/sod.html">pyro.compressible_sdc.problems.sod</a></li>
+<li><a href="pyro/compressible_sdc/problems/test.html">pyro.compressible_sdc.problems.test</a></li>
+<li><a href="pyro/compressible_sdc/simulation.html">pyro.compressible_sdc.simulation</a></li>
+<li><a href="pyro/compressible_sr/BC.html">pyro.compressible_sr.BC</a></li>
+<li><a href="pyro/compressible_sr/c2p.html">pyro.compressible_sr.c2p</a></li>
+<li><a href="pyro/compressible_sr/derives.html">pyro.compressible_sr.derives</a></li>
+<li><a href="pyro/compressible_sr/eos.html">pyro.compressible_sr.eos</a></li>
+<li><a href="pyro/compressible_sr/interface.html">pyro.compressible_sr.interface</a></li>
+<li><a href="pyro/compressible_sr/problems/acoustic_pulse.html">pyro.compressible_sr.problems.acoustic_pulse</a></li>
+<li><a href="pyro/compressible_sr/problems/advect.html">pyro.compressible_sr.problems.advect</a></li>
+<li><a href="pyro/compressible_sr/problems/bubble.html">pyro.compressible_sr.problems.bubble</a></li>
+<li><a href="pyro/compressible_sr/problems/gresho.html">pyro.compressible_sr.problems.gresho</a></li>
+<li><a href="pyro/compressible_sr/problems/hse.html">pyro.compressible_sr.problems.hse</a></li>
+<li><a href="pyro/compressible_sr/problems/kh.html">pyro.compressible_sr.problems.kh</a></li>
+<li><a href="pyro/compressible_sr/problems/logo.html">pyro.compressible_sr.problems.logo</a></li>
+<li><a href="pyro/compressible_sr/problems/quad.html">pyro.compressible_sr.problems.quad</a></li>
+<li><a href="pyro/compressible_sr/problems/rt.html">pyro.compressible_sr.problems.rt</a></li>
+<li><a href="pyro/compressible_sr/problems/rt2.html">pyro.compressible_sr.problems.rt2</a></li>
+<li><a href="pyro/compressible_sr/problems/sedov.html">pyro.compressible_sr.problems.sedov</a></li>
+<li><a href="pyro/compressible_sr/problems/sod.html">pyro.compressible_sr.problems.sod</a></li>
+<li><a href="pyro/compressible_sr/problems/test.html">pyro.compressible_sr.problems.test</a></li>
+<li><a href="pyro/compressible_sr/simulation.html">pyro.compressible_sr.simulation</a></li>
+<li><a href="pyro/compressible_sr/unsplit_fluxes.html">pyro.compressible_sr.unsplit_fluxes</a></li>
+<li><a href="pyro/diffusion/problems/gaussian.html">pyro.diffusion.problems.gaussian</a></li>
+<li><a href="pyro/diffusion/problems/test.html">pyro.diffusion.problems.test</a></li>
+<li><a href="pyro/diffusion/simulation.html">pyro.diffusion.simulation</a></li>
+<li><a href="pyro/incompressible/incomp_interface.html">pyro.incompressible.incomp_interface</a></li>
+<li><a href="pyro/incompressible/problems/converge.html">pyro.incompressible.problems.converge</a></li>
+<li><a href="pyro/incompressible/problems/shear.html">pyro.incompressible.problems.shear</a></li>
+<li><a href="pyro/incompressible/simulation.html">pyro.incompressible.simulation</a></li>
+<li><a href="pyro/lm_atm/LM_atm_interface.html">pyro.lm_atm.LM_atm_interface</a></li>
+<li><a href="pyro/lm_atm/problems/bubble.html">pyro.lm_atm.problems.bubble</a></li>
+<li><a href="pyro/lm_atm/problems/gresho.html">pyro.lm_atm.problems.gresho</a></li>
+<li><a href="pyro/lm_atm/simulation.html">pyro.lm_atm.simulation</a></li>
+<li><a href="pyro/mesh/array_indexer.html">pyro.mesh.array_indexer</a></li>
+<li><a href="pyro/mesh/boundary.html">pyro.mesh.boundary</a></li>
+<li><a href="pyro/mesh/fv.html">pyro.mesh.fv</a></li>
+<li><a href="pyro/mesh/integration.html">pyro.mesh.integration</a></li>
+<li><a href="pyro/mesh/patch.html">pyro.mesh.patch</a></li>
+<li><a href="pyro/mesh/reconstruction.html">pyro.mesh.reconstruction</a></li>
+<li><a href="pyro/multigrid/MG.html">pyro.multigrid.MG</a></li>
+<li><a href="pyro/multigrid/edge_coeffs.html">pyro.multigrid.edge_coeffs</a></li>
+<li><a href="pyro/multigrid/general_MG.html">pyro.multigrid.general_MG</a></li>
+<li><a href="pyro/multigrid/variable_coeff_MG.html">pyro.multigrid.variable_coeff_MG</a></li>
+<li><a href="pyro/particles/particles.html">pyro.particles.particles</a></li>
+<li><a href="pyro/plot.html">pyro.plot</a></li>
+<li><a href="pyro/pyro_sim.html">pyro.pyro_sim</a></li>
+<li><a href="pyro/simulation_null.html">pyro.simulation_null</a></li>
+<li><a href="pyro/swe/derives.html">pyro.swe.derives</a></li>
+<li><a href="pyro/swe/interface.html">pyro.swe.interface</a></li>
+<li><a href="pyro/swe/problems/acoustic_pulse.html">pyro.swe.problems.acoustic_pulse</a></li>
+<li><a href="pyro/swe/problems/advect.html">pyro.swe.problems.advect</a></li>
+<li><a href="pyro/swe/problems/dam.html">pyro.swe.problems.dam</a></li>
+<li><a href="pyro/swe/problems/kh.html">pyro.swe.problems.kh</a></li>
+<li><a href="pyro/swe/problems/logo.html">pyro.swe.problems.logo</a></li>
+<li><a href="pyro/swe/problems/quad.html">pyro.swe.problems.quad</a></li>
+<li><a href="pyro/swe/problems/test.html">pyro.swe.problems.test</a></li>
+<li><a href="pyro/swe/simulation.html">pyro.swe.simulation</a></li>
+<li><a href="pyro/swe/unsplit_fluxes.html">pyro.swe.unsplit_fluxes</a></li>
+<li><a href="pyro/test.html">pyro.test</a></li>
+<li><a href="pyro/util/compare.html">pyro.util.compare</a></li>
+<li><a href="pyro/util/io_pyro.html">pyro.util.io_pyro</a></li>
+<li><a href="pyro/util/msg.html">pyro.util.msg</a></li>
+<li><a href="pyro/util/plot_tools.html">pyro.util.plot_tools</a></li>
+<li><a href="pyro/util/profile_pyro.html">pyro.util.profile_pyro</a></li>
+<li><a href="pyro/util/runparams.html">pyro.util.runparams</a></li>
+</ul>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, pyro development team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
