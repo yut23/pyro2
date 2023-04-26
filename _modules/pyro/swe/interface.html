@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pyro.swe.interface &mdash; pyro 0.0.post1590+g8601684 documentation</title>
+  <title>pyro.swe.interface &mdash; pyro 0.0.post1599+g6cf65c8 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -64,10 +64,10 @@
 <p class="caption" role="heading"><span class="caption-text">Solvers</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../advection_basics.html">Advection solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../burgers_basics.html">Burgers’ Equation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compressible_basics.html">Compressible hydrodynamics solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../compressible_compare.html">Compressible solver comparisons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../multigrid_basics.html">Multigrid solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../multigrid-examples.html">Multigrid examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multigrid.html">Multigrid Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../diffusion_basics.html">Diffusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../incompressible_basics.html">Incompressible hydrodynamics solver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../lowmach_basics.html">Low Mach number hydrodynamics solver</a></li>
@@ -331,7 +331,7 @@
 <div class="viewcode-block" id="riemann_roe"><a class="viewcode-back" href="../../../pyro.swe.html#pyro.swe.interface.riemann_roe">[docs]</a><span class="nd">@njit</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">riemann_roe</span><span class="p">(</span><span class="n">idir</span><span class="p">,</span> <span class="n">ng</span><span class="p">,</span>
                 <span class="n">ih</span><span class="p">,</span> <span class="n">ixmom</span><span class="p">,</span> <span class="n">iymom</span><span class="p">,</span> <span class="n">ihX</span><span class="p">,</span> <span class="n">nspec</span><span class="p">,</span>
-                <span class="n">lower_solid</span><span class="p">,</span> <span class="n">upper_solid</span><span class="p">,</span>
+                <span class="n">lower_solid</span><span class="p">,</span> <span class="n">upper_solid</span><span class="p">,</span>  <span class="c1"># pylint: disable=unused-argument</span>
                 <span class="n">g</span><span class="p">,</span> <span class="n">U_l</span><span class="p">,</span> <span class="n">U_r</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the Roe Riemann solver with entropy fix. The implementation</span>
@@ -479,7 +479,7 @@
 <div class="viewcode-block" id="riemann_hllc"><a class="viewcode-back" href="../../../pyro.swe.html#pyro.swe.interface.riemann_hllc">[docs]</a><span class="nd">@njit</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">riemann_hllc</span><span class="p">(</span><span class="n">idir</span><span class="p">,</span> <span class="n">ng</span><span class="p">,</span>
                  <span class="n">ih</span><span class="p">,</span> <span class="n">ixmom</span><span class="p">,</span> <span class="n">iymom</span><span class="p">,</span> <span class="n">ihX</span><span class="p">,</span> <span class="n">nspec</span><span class="p">,</span>
-                 <span class="n">lower_solid</span><span class="p">,</span> <span class="n">upper_solid</span><span class="p">,</span>
+                 <span class="n">lower_solid</span><span class="p">,</span> <span class="n">upper_solid</span><span class="p">,</span>  <span class="c1"># pylint: disable=unused-argument</span>
                  <span class="n">g</span><span class="p">,</span> <span class="n">U_l</span><span class="p">,</span> <span class="n">U_r</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    this is the HLLC Riemann solver.  The implementation follows</span>

@@ -30,10 +30,10 @@ pyro: a python hydro code
    :caption: Solvers
 
    advection_basics
+   burgers_basics
    compressible_basics
    compressible_compare
-   multigrid_basics
-   multigrid-examples.ipynb
+   multigrid
    diffusion_basics
    incompressible_basics
    lowmach_basics
