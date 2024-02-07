@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Analysis routines &mdash; pyro 0.0.post1599+g6cf65c8 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <title>Analysis routines &mdash; pyro 0.0.post1620+g001318e documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/theme_overrides.css?v=2e394b92" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=14eb1740"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -73,6 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="multigrid.html">Multigrid Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diffusion_basics.html">Diffusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="incompressible_basics.html">Incompressible hydrodynamics solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompressible_viscous_basics.html">Incompressible viscous hydrodynamics solver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lowmach_basics.html">Low Mach number hydrodynamics solver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="swe_basics.html">Shallow water solver</a></li>
 <li class="toctree-l1"><a class="reference internal" href="particles_basics.html">Particles</a></li>
@@ -122,7 +125,7 @@
            <div itemprop="articleBody">
              
   <section id="analysis-routines">
-<span id="analysis"></span><h1>Analysis routines<a class="headerlink" href="#analysis-routines" title="Permalink to this heading"></a></h1>
+<span id="analysis"></span><h1>Analysis routines<a class="headerlink" href="#analysis-routines" title="Link to this heading"></a></h1>
 <p>In addition to the main pyro program, there are many analysis tools
 that we describe here. Note: some problems write a report at the end
 of the simulation specifying the analysis routines that can be used
@@ -141,9 +144,30 @@ attributes stored in the HDF5 file.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">analysis/</span></code></p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">convergence.py</span></code>: this compares two files with different
-resolutions (one a factor of 2 finer than the other).  It coarsens
-the finer data and then computes the norm of the difference.  This
-is used to test the convergence of solvers.</p></li>
+resolutions (one a factor of N-times, (default is 2 times or <code class="docutils literal notranslate"><span class="pre">N=2</span></code>) finer
+than the other). It coarsens the finer data and then computes the
+norm of the difference.  The default variable being compared is
+density, but a different variable can be selected with the
+<code class="docutils literal notranslate"><span class="pre">var_name</span></code> argument.
+This is used to test the convergence of solvers.</p>
+<p>usage: <code class="docutils literal notranslate"><span class="pre">./convergence.py</span> <span class="pre">fine_file</span> <span class="pre">coarse_file</span> <span class="pre">var_name</span> <span class="pre">N</span></code></p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convergence_plot.py</span></code>: this compares 3 or more files with different
+resolutions (factor of N-times (default is 2 times) finer than the
+others) by using <code class="docutils literal notranslate"><span class="pre">convergence.py</span></code>. It prints out a table that summarizes
+the L-2 Norm of all the variables by coarsening the finer data and comparing
+it to the coarse data, as well as the order of convergence between the
+L-2 Norms. It also produces a plot in the end to compare the theoretical
+order of convergence to the actual order of convergence from the datasets.
+The data files should enter from the finest file to the coarsest file. There
+should be at least 3 files, <code class="docutils literal notranslate"><span class="pre">fine_file</span> <span class="pre">med_file</span> <span class="pre">coarse_file</span></code>.
+The output file name for the convergence plot, <code class="docutils literal notranslate"><span class="pre">out</span> <span class="pre">=</span> <span class="pre">convergence_plot.pdf</span></code>,
+by default. The theoretical order of convergence for the solver, <code class="docutils literal notranslate"><span class="pre">order=2</span></code>,
+by default. The multiplicative factor between each data files are, <code class="docutils literal notranslate"><span class="pre">resolution=2</span></code>,
+by default. This is used to test the order of the convergence of the solver
+when there is no analytical solutions.</p>
+<p>usage: <code class="docutils literal notranslate"><span class="pre">./convergence_plot.py</span> <span class="pre">files*</span> <span class="pre">-o</span> <span class="pre">out</span> <span class="pre">-n</span> <span class="pre">order</span> <span class="pre">-r</span> <span class="pre">resolution</span></code></p>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dam_compare.py</span></code>: this takes an output file from the
 shallow water dam break problem and plots a slice through the domain
 together with the analytic solution (calculated in the script).</p>
@@ -174,7 +198,7 @@ from <code class="docutils literal notranslate"><span class="pre">cylindrical-se
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smooth_error.py</span></code>: this takes an output file from the advection
 solver’s smooth problem and compares to the analytic solution,
-outputing the L2 norm of the error.</p>
+outputting the L2 norm of the error.</p>
 <p>usage: <code class="docutils literal notranslate"><span class="pre">./smooth_error.py</span> <span class="pre">file</span></code></p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sod_compare.py</span></code>: this takes an output file from the
